@@ -1,0 +1,66 @@
+Description:
+	My team has been working very hard on new features for our flag printing program! I wonder how they'll work 					together?
+	You can download the challenge files here:
+	-challenge.zip
+	
+Solution :
+	=> Reference By PicoPrimer.
+	
+	Concept:
+		-> TeamWork Using Git.
+	Process:
+		Step 1: Downloaded Source File
+		     $ wget "https://artifacts.picoctf.net/c_titan/178/challenge.zip"
+		     
+		Step 2: Unziped challenge.zip
+		     $ unzip challenge.zip
+		
+		Step 3: It Contains Folder drop-in Folder. drop-in contains flag.py
+		     -> Checked the file it contains Information "print("Printing the flag...")"
+		
+		Step 4: Checking Git saving Points.
+		     $ git log
+		     ->There is no Previous saving points
+		    
+		Step 5: Checking git Branches
+		    => Branches which are other team members are Working with Project
+		     $ git branch
+		       feature/part-1
+		       feature/part-2
+		       feature/part-3
+		     * main
+		    // There are 3 other branches of working with project
+		    
+		Step 6: Switch with branches By using $ git checkout <branch>
+		     $ git checkout feature/part-1
+		       Switched to branch 'feature/part-1'
+		       
+		Step 7: Read the flag.py File
+		     $ cat flag.py
+		       print("Printing the flag...")
+		       print("picoCTF{t3@mw0rk_", end='')
+		
+		Step 8: Repeat Steps 6 & 7 with other branches "feature/part-2" & "feature/part-3"
+		     For feature/part-2 :
+		        $ cat flag.py
+		          print("Printing the flag...")
+			  print("m@k3s_th3_dr3@m_", end='')
+			  
+		     For feature/part-3 :
+		        $ cat flag.py
+		          print("Printing the flag...")
+			  print("w0rk_6c06cec1}")
+			  
+	        Finally : Combine Flag.
+	
+	Flag : picoCTF{t3@mw0rk_m@k3s_th3_dr3@m_w0rk_6c06cec1}
+	
+
+Summary : 
+ => Learned Git Branches 
+ => Switching Git Branches with $ git checkout <branch>
+ 
+Drawback :
+ => Merging of Git Branches I can't Done 
+ => Learn Once Merging of git Branches
+

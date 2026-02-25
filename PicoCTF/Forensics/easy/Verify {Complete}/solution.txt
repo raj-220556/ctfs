@@ -1,0 +1,17 @@
+
+
+
+
+$ctf-player@pico-chall$ cd ..
+$ctf-player@pico-chall$ ls
+   checksum.txt  decrypt.sh  files  flag.txt
+$ctf-player@pico-chall$ sha256sum checksum.txt 
+  966585e9ad217d9a7a7f088695666ebefdad453efc7b2790b78c4fb4b02bb3fe  checksum.txt
+$ctf-player@pico-chall$ sha256sum files/* | grep "966585e9ad217d9a7a7f088695666ebefdad453efc7b2790b78c4fb4b02bb3fe"
+$ctf-player@pico-chall$ cat checksum.txt 
+  3ad37ed6c5ab81d31e4c94ae611e0adf2e9e3e6bee55804ebc7f386283e366a4
+$ctf-player@pico-chall$ sha256sum files/* | grep "3ad37ed6c5ab81d31e4c94ae611e0adf2e9e3e6bee55804ebc7f386283e366a4"
+    3ad37ed6c5ab81d31e4c94ae611e0adf2e9e3e6bee55804ebc7f386283e366a4  files/e018b574
+$ctf-player@pico-chall$ ./decrypt.sh files/e018b574 
+  picoCTF{trust_but_verify_e018b574}
+

@@ -1,0 +1,11 @@
+use Gobuster to find hidden directories
+
+$ gobuster dir -u http://mercury.picoctf.net:27278/ -w /usr/share/wordlists/common.txt
+
+
+parts of are in flags are in
+/index.html
+/mycss.css
+/robots.txt
+/.htaccess
+/.DS_Store  // not get this in burte force

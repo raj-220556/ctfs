@@ -1,0 +1,6 @@
+To find a file in working directory:
+	find . -name "filename.txt"
+-> Creating folder as <.FolderName> makes folder as hideen
+-> wget <URL> : Downloads file in working directory
+-> cat <fileName> : reads the file
+-> git log : makes us to send past saving points

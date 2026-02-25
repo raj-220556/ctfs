@@ -1,0 +1,47 @@
+Description:
+	I accidentally wrote the flag down. Good thing I deleted it!
+	You download the challenge files here:
+	-challenge.zip
+	
+Solution:
+	=>Reference By Reading PicoPrimer
+	Concept:
+		- valuable Information Stolen By Source Code using Git.
+		
+	Process:
+		Step 1: Downloaded Source File
+		     $ wget "https://artifacts.picoctf.net/c_titan/139/challenge.zip"
+		     
+		Step 2: Unziped challenge.zip
+		     $ unzip challenge.zip
+		    
+		Step 3: It Contains Folder drop-in Folder. drop-in contains message.txt
+		     -> Checked the file it contains Information "TOP SECRET"
+		     
+		Step 4: Go TO drop-in Folder TO Observe Saving points			
+		     $ git log
+		     	commit 144fdc44b09058d7ea7f224121dfa5babadddbb9 (HEAD, master)
+			Author: picoCTF <ops@picoctf.com>
+			Date:   Tue Mar 12 00:06:25 2024 +0000
+
+			    remove sensitive info
+
+			commit 7d3aa557ff7ba7d116badaf5307761efb3622249
+			Author: picoCTF <ops@picoctf.com>
+			Date:   Tue Mar 12 00:06:25 2024 +0000
+
+			    create flag
+			->It gives previous saving points of git version  
+			
+		Step 5:Moving to Previous point by Using <commit ID>
+		     $ git checkout 7d3aa557ff7ba7d116badaf5307761efb3622249
+		     -> "Changes the Position of the Head in to previous position"
+		     
+		Stop 6: Now the file message.txt at in Previous Saving Point
+		     ->Read the message.txt file
+		     $ cat message.txt
+		     	picoCTF{s@n1t1z3_be3dd3da}
+		     
+	Flag: picoCTF{s@n1t1z3_be3dd3da}
+	
+

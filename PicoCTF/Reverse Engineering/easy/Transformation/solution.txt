@@ -1,0 +1,23 @@
+''.join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])
+
+
+that is UTF-8 text use logic to write a python script 
+OR 
+Use Cybercheif to decrypt Text
+
+$ file enc 
+ enc: Unicode text, UTF-8 text, with no line terminators
+ 
+ flag : picoCTF{16_bits_inst34d_of_8_26684c20}
+ 
+ 
+ Python script :
+ encoded_flag = open("enc").read()
+flag = ""
+for i in range(0, len(encoded_flag)):
+    character1 = chr((ord(encoded_flag[i]) >> 8))
+    character2 = chr(encoded_flag[i].encode('utf-16be')[-1])
+    flag += character1
+    flag += character2
+
+print("Flag: " + flag)
